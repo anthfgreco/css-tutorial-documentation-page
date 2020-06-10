@@ -1,0 +1,226 @@
+<head>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<nav id="navbar">
+  <header id="CSS-Tutorial">CSS Tutorial</header>
+  <ul>
+  <li><a class="nav-link" href="#introduction">Introduction</a></li>
+  <li><a class="nav-link" href="#syntax">Syntax</a></li>
+  <li><a class="nav-link" href="#how_to_add_CSS">How To Add CSS</a></li>
+  <li><a class="nav-link" href="#colors">Colors</a></li>
+  <li><a class="nav-link" href="#margin">Margin</a></li>
+  <li><a class="nav-link" href="#padding">Padding</a></li>
+  <li><a class="nav-link" href="#links">Links</a></li>
+  </ul>
+</nav>
+
+<main id="main-doc">
+  <section class="main-section" id="introduction">
+    <header>Introduction</header>
+    <p>CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper, or in other media. CSS saves a lot of work by controlling the layout of multiple web pages all at once. External stylesheets are stored in CSS files. CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.</p>
+    <p>HTML was never intended to contain tags for formatting a web page, it was created to describe the content of a web page. Development of large websites, where fonts and color information were added to every single page, became a long and expensive process using only HTML. To solve this problem, the World Wide Web Consortium (W3C) created CSS.</p>
+  </section>
+  
+  <section class="main-section" id="syntax">
+    <header>Syntax</header>
+    <p>A CSS rule-set consists of a selector and a declaration block:</p>
+    <img src="https://www.w3schools.com/css/selector.gif" id="syntax-img">
+    <p>The selector points to the HTML element you want to style.</p>
+    <p>The declaration block contains one or more declarations separated by semicolons.</p>
+    <p>Each declaration includes a CSS property name and a value, separated by a colon.</p>
+    <p>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.</p>
+    <div class="codebox">
+      <h2 class="example">Example</h2>
+      <p>In this example all p elements will be center-aligned, with a red text color:</p>
+      <code
+          >p {
+      &nbspcolor: red;
+      &nbsptext-align: center;
+      }
+      </code>
+    </div>
+  </section>
+  
+  <section class="main-section" id="how_to_add_CSS">
+    <header>How To Add CSS</header>
+    <p>There are three ways of inserting a style sheet:</p>
+    <ul>
+      <li>External CSS</li>
+      <li>Internal CSS</li>
+      <li>Inline CSS</li>
+    </ul>
+    <h2>External CSS</h2>
+    <p>With an external style sheet, you can change the look of an entire website by changing just one file!</p>
+    <p>Each HTML page must include a reference to the external style sheet file inside the link element, inside the head section.</p>
+    <div class="codebox">
+      <h2 class="example">Example</h2>
+      <p>External styles are defined within the link element, inside the head section of an HTML page:</p>
+      <code
+          >&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltlink rel="stylesheet" type="text/css" href="mystyle.css"&gt
+&lt/head&gt
+&ltbody&gt
+&lth1&gtThis is a heading&lt/h1&gt
+&ltp&gtThis is a paragraph.&lt/p&gt
+&lt/body&gt
+&lt/html&gt
+      </code>
+    </div>
+    <p>An external style sheet can be written in any text editor, and must be saved with a .css extension. The external .css file should not contain any HTML tags. Here is how the "mystyle.css" file looks like:</p>
+    <div class="codebox">
+      <h2 class="example">"mystyle.css"</h2>
+      <code
+          >body {
+  &nbspbackground-color: lightblue;
+}
+
+h1 {
+  &nbspcolor: navy;
+  &nbspmargin-left: 20px;
+}
+      </code>
+    </div>
+    <h2>Internal CSS</h2>
+    <p>An internal style sheet may be used if one single HTML page has a unique style.</p>
+    <p>The internal style is defined inside the style element, inside the head section.<p>
+     <div class="codebox">
+      <h2 class="example">Example</h2>
+      <p>Internal styles are defined within the style element, inside the head section of an HTML page:</p>
+      <code
+    >&lt!DOCTYPE html&gt
+&lthtml&gt
+&lthead&gt
+&ltstyle&gt
+body {
+  &nbspbackground-color: linen;
+}
+
+h1 {
+  &nbspcolor: maroon;
+  &nbspmargin-left: 40px;
+}
+&lt/style&gt
+&lt/head&gt
+&ltbody&gt
+
+&lth1&gtThis is a heading&lt/h1&gt
+&ltp&gtThis is a paragraph.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+       </code>
+    </div>
+    <h2>Inline CSS</h2>
+    <p>An inline style may be used to apply a unique style for a single element.</p>
+    <p>To use inline styles, add the style attribute to the relevant element. The style attribute can contain any CSS property.</p>
+    <div class="codebox">
+      <h2 class="example">Example</h2>
+      <p>Inline styles are defined within the "style" attribute of the relevant element:</p>
+      <code
+    >&lt!DOCTYPE html&gt
+&lthtml&gt
+&ltbody&gt
+
+&lth1 style="color:blue;text-align:center;"&gtThis is a heading&lt/h1&gt
+&ltp style="color:red;"&gtThis is a paragraph.&lt/p&gt
+
+&lt/body&gt
+&lt/html&gt
+      </code>
+    </div>
+  </section>
+  
+  <section class="main-section" id="colors">
+    <header>Colors</header>
+    <p>Colors are specified using predefined color names, or RGB, HEX, HSL, RGBA, HSLA values.</p>
+    <h2>CSS Color Names</h2>
+    <p>In CSS, a color can be specified by using a color name:</p>
+    <ul id="color-names">
+      <li style="background-color:Tomato;">Tomato</li>
+      <li style="background-color:Orange;">Orange</li>
+      <li style="background-color:DodgerBlue;">DodgerBlue</li>
+      <li style="background-color:MediumSeaGreen;">MediumSeaGreen</li>
+      <li style="background-color:Gray;">Gray</li>
+      <li style="background-color:SlateBlue;">SlateBlue</li>
+      <li style="background-color:Violet;">Violet</li>
+      <li style="background-color:LightGray;">LightGray</li>
+    </ul>
+    <h2>CSS Background Color</h2>
+    <p>You can set the background color for HTML elements:</p>
+    <p style="background-color:blue;" class="background-color-example">Hello World!</p>
+    <p style="background-color:tomato;" class="background-color-example">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    <div class="codebox">
+      <h2 class="example">Example</h2>
+      <code
+          >&lth1 style="background-color:DodgerBlue;"&gtHello World&lt/h1&gt
+&ltp style="background-color:Tomato;"&gtLorem ipsum...&lt/p&gt
+    </code>
+    </div>
+    <h2>CSS Text Color</h2>
+    <p>You can set the color of text:</p>
+    <p style="color:blue;">Hello World!</p>
+    <p style="color:tomato;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+    <div class="codebox">
+      <h2 class="example">Example</h2>
+      <code
+          >&ltp style="color:DodgerBlue;"&gtHello World&lt/p&gt
+&ltp style="color:Tomato;"&gtLorem ipsum...&lt/p&gt
+    </code>
+    </div>
+  </section>
+    
+  <section class="main-section" id="margin">
+    <header>Margin</header>
+    <p>The CSS margin properties are used to create space around elements, outside of any defined borders.</p>
+    <p>CSS has properties for specifying the margin for each side of an element:</p>
+    <ul>
+      <li>margin-top</li>
+      <li>margin-right</li>
+      <li>margin-bottom</li>
+      <li>margin-left</li>
+    </ul>
+    <p>All the margin properties can have the following values:</p>
+    <ul>
+      <li>auto - the browser calculates the margin</li>
+      <li>length - specifies a margin in px, pt, cm, etc.</li>
+      <li>% - specifies a margin in % of the width of the containing element</li>
+      <li>inherit - specifies that the margin should be inherited from the parent element</li>
+    </ul>
+  </section>
+  
+  <section class="main-section" id="padding">
+    <header>Padding</header>
+    <p>The CSS padding properties are used to generate space around an element's content, inside of any defined borders.</p>
+    <p>CSS has properties for specifying the padding for each side of an element:</p>
+    <ul>
+      <li>padding-top</li>
+      <li>padding-right</li>
+      <li>padding-bottom</li>
+      <li>padding-left</li>
+    </ul>
+    <p>All the padding properties can have the following values:</p>
+    <ul>
+      <li>length - specifies a padding in px, pt, cm, etc.</li>
+      <li>% - specifies a padding in % of the width of the containing element</li>
+      <li>inherit - specifies that the padding should be inherited from the parent element</li>
+    </ul>
+  </section>
+  
+  <section class="main-section" id="links">
+    <header>Links</header>
+    <p>With CSS, links can be styled in different ways. Links can be styled with any CSS property (e.g. color, font-family, background, etc.).</p>
+    <p>In addition, links can be styled differently depending on what <strong>state</strong> they are in.</p>
+    <p>The four link states are:</p>
+    <ul>
+      <li>a:link - a normal, unvisited link</li>
+      <li>a:visited - a link the user has visited</li>
+      <li>a:hover - a link when the user mouses over it</li>
+      <li>a:active - a link the moment it is clicked</li>
+    </ul>
+  </section>
+  
+</main>
